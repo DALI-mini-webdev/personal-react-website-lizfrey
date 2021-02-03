@@ -1,18 +1,13 @@
 import './App.css';
-import ReactDOM from 'react-dom';
 import cambodia from './assets/cambodia-elephant.jpg';
 import me from './assets/ElizabethFrey.jpeg';
 import grad from './assets/IMG_7078.jpeg';
+import Navbar from './components/Navbar/Navbar';
+import Name from './components/Name'
 
 function App(){
-  var name;
   const buttonFunction = () =>{
     console.log("The button has been clicked.");
-    ReactDOM.render(name, document.getElementById('name').innerHTML);
-  }
-  const onChangeFunction = (event) =>{
-    console.log(event.target.value);
-    name = event.target.value;
   }
   const greetingsList = ["Hi", "Hello"];
   const greetingsMap = greetingsList.map((greeting) => {
@@ -22,11 +17,12 @@ function App(){
   });
   return (
     <div className="App">
+      <Navbar />
         <h1>Elizabeth Frey's Personal Website</h1>
-
         <div className="sections">
           <h2 id="name">Introduce yourself!</h2>
-          <input type="text" onChange={onChangeFunction}/>
+          <Name />
+          <input type="text" onChange={Name.onChangeFunction}/>
           <button onclick={buttonFunction}>Click here to set name!</button>
           <div>{greetingsMap}</div>
         </div>
