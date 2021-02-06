@@ -3,7 +3,7 @@ import './Navbar.css'
 export const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '../App.js',
         cname: 'nav-links'
     },
     {

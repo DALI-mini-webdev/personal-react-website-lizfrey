@@ -104,10 +104,24 @@ width: 100%;
 button{
   border: 5px solid #7A4F43;
   text-align: center;
-  background-color:#756C64;
+  background-color:#DBD4C5;
   padding: 15px 32px;
 }
 input{
+  border: 5px solid #7A4F43;
+  text-align: center;
+  background-color:#DBD4C5;
+  padding: 15px 32px;
+}
+
+table{
+  width: 100%;
+}
+th{
+  width: 50%;
+}
+
+#contact{
   border: 5px solid #7A4F43;
   text-align: center;
   background-color:#DBD4C5;
