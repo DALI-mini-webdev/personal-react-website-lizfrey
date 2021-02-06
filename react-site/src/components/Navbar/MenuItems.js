@@ -12,8 +12,8 @@ export const MenuItems = [
         cname: 'nav-links'
     },
     {
-        title: 'Contact Me',
-        url: '#',
+        title: 'GitHub',
+        url: 'https://github.com/lizfrey',
         cname: 'nav-links'
     },
 ]

@@ -6,25 +6,12 @@ import Navbar from './components/Navbar/Navbar';
 import Name from './components/Name'
 
 function App(){
-  const buttonFunction = () =>{
-    console.log("The button has been clicked.");
-  }
-  const greetingsList = ["Hi", "Hello"];
-  const greetingsMap = greetingsList.map((greeting) => {
-    return(
-      <p>{greeting}</p>
-    )
-  });
   return (
     <div className="App">
       <Navbar />
-        <h1>Elizabeth Frey's Personal Website</h1>
+        <h1>My Personal Website</h1>
         <div className="sections">
-          <h2 id="name">Introduce yourself!</h2>
           <Name />
-          <input type="text" onChange={Name.onChangeFunction}/>
-          <button onclick={buttonFunction}>Click here to set name!</button>
-          <div>{greetingsMap}</div>
         </div>
 
         <div className="sections">

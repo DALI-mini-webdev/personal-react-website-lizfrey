@@ -8,7 +8,7 @@
     color:#36312E;
 }
 .navbar-logo{
-    color:#fff;
+    color:#36312E;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -26,14 +26,14 @@
     list-style: none;
     text-align: center;
     width:70wv;
-    justify-content: end;
+    justify-content: center;
     margin-right: 2rem;
 }
 
 .nav-links{
-    color:white;
+    color:#36312E;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
 }
 
 .nav-links:hover{
