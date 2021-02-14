@@ -5,13 +5,44 @@ import grad from './assets/IMG_7078.jpeg';
 import Navbar from './components/Navbar/Navbar';
 import Name from './components/Name'
 import Contact from './components/Contact'
+import axios from 'axios'; 
 import React, {Component} from 'react';
 
 class App extends Component{
   constructor(props){
     super(props);
-    this.state={page:"home"};
+    this.state={page:"home", 
+                data:null
+              };
   }
+
+  fetchData = () => {
+    // It will take an indeterminate amount of time for axios to get the data
+    // so we use this then/catch format
+    // this says: hit this endpoint. Then when you're done do X. 
+    // If there is an error at any point, do Y
+     axios.get("https://foodish-api.herokuapp.com/api/")
+     .then((response) => {
+       console.log(response);
+       this.setState({data: response.data});
+       console.log(this.state.data);
+     }).catch((error) => {
+       console.log(error)
+     })
+
+ };
+
+ renderData = () => {
+   if(this.state.data) {
+     return(
+       <div>
+         <img src={this.state.data.image} width="auto" height="400" ></img>
+       </div>
+     )
+   }else{
+     return null
+   }
+ }
 
   render(){
     if(this.state.page === "home"){
@@ -22,6 +53,14 @@ class App extends Component{
           <div className="sections">
             <Name />
           </div>
+          <div className="sections">
+            <h2>Food</h2>
+            <button onClick = {this.fetchData}>Click here to see what you should eat next.</button>
+            <p>
+            {this.renderData()}
+            </p>
+          </div>
+
           <div className="sections">
               <h2>About Me</h2>
               <p>Information on my childhood and what I am up to today!</p>

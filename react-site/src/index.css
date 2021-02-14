@@ -106,6 +106,8 @@ button{
   text-align: center;
   background-color:#DBD4C5;
   padding: 15px 32px;
+  font-family: Garamond, serif;
+  color:#1F1C1A;
 }
 input{
   border: 5px solid #7A4F43;
