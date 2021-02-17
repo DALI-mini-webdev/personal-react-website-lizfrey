@@ -35,7 +35,7 @@ class Name extends Component{
 
     fetchNames = () => {
         const newNames = [];
-        Firebase.db.collection('todo').get()
+        Firebase.db.collection('names').get()
           .then(querySnapshot => {
             querySnapshot.forEach( doc => {
               console.log(doc.data());
