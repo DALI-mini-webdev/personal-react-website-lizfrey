@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import Name from './components/Name'
 import Contact from './components/Contact'
 import axios from 'axios'; 
+import Firebase from './firebase/index';
 import React, {Component} from 'react';
 
 class App extends Component{
@@ -45,6 +46,8 @@ class App extends Component{
  }
 
   render(){
+    console.log(Firebase);
+    console.log(Firebase.db);
     if(this.state.page === "home"){
       return(
       <div className="App">
